@@ -5,11 +5,11 @@
 
 * {
   box-sizing: border-box;
+  animation: fadeIn ease 1.25s;
 }
 
 html {
   scroll-behavior: smooth;
-  animation: fadeIn ease 2.25s;
 }
 
 body {
