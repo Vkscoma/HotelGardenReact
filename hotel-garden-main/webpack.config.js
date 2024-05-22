@@ -2,6 +2,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import CopyPlugin from 'copy-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -41,28 +42,6 @@ export default {
                     },
                 ],
             },
-            {
-                loader: 'image-webpack-loader',
-                options: {
-                    mozjpeg: {
-                        progressive: true,
-                        quality: 65
-                    },
-                    optipng: {
-                        enabled: false,
-                    },
-                    pngquant: {
-                        quality: [0.65, 0.90],
-                        speed: 4
-                    },
-                    gifsicle: {
-                        interlaced: false,
-                    },
-                    webp: {
-                        quality: 75
-                    },
-                },
-            }
         ],
     },
     resolve: {
@@ -73,6 +52,9 @@ export default {
             patterns: [
                 { from: 'public', to: '' },
             ],
+        }),
+        new HtmlWebpackPlugin({
+            template: './index.html', // path to your index.html file
         }),
     ],
 };
