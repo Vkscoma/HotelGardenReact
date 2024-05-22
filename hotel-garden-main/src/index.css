@@ -85,4 +85,8 @@ body {
     gap: 1rem;
     margin: 2rem 0;
   }
+
+  .mobile--width {
+    width: 18rem;
+  }
 }
