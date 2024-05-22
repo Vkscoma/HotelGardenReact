@@ -14,7 +14,7 @@ const Modal = ({ isModalOpen, image, onModalClose }) => {
                 transition={{ duration: 0.8 }}
             >
                 <motion.div
-                    className="relative rounded-lg shadow-lg max-w-3xl md:p-6 p-4"
+                    className="relative max-w-xl md:p-6 p-4"
                     onClick={(e) => e.stopPropagation()}
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -74,39 +74,78 @@ const About = () => {
     ]
     return (
         <section className="about--content bg-third py-12 text-dark" id="about">
-            <h2 className="about--title text-center text-h2 my-8">ABOUT US</h2>
-            <div className="about--container md:grid md:grid-cols-2 p-4">
-                <img
-                    className="about--img md:h-fit m-auto md:rounded object-cover shadow-lg shadow-dark md:w-4/5"
-                    src="/images/HotelGardenAbout.webp"
-                    alt="Hotel Garden"
-                />
-                <div className="flex flex-col justify-center">
-                    <p className="about--p text-2xl">
-                        Hotel Garden is a Sacramento based Indie Rock band. Their musical style
-                        draws inspiration from artists such as Peach Pit, Turnover, and The
-                        Backseat Lovers. With each show, the band strives to connect with
-                        audiences through their music and create a memorable experience.
-                    </p>
-                </div>
-            </div>
-
-            <h2 className="my-8 text-center text-h2">Gallery</h2>
-            <div
-                className="gallery-container container grid my-8 mx-auto gap-4 md:grid-cols-3 grid-cols-1"
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.25 }}
+                viewport={{
+                    amount: "500px",
+                    once: true,
+                }}
             >
-                {galleryImages.map((image) => {
-                    return (
-                        <img
-                            key={image.id}
-                            className="hover:scale-105 cursor-pointer transition ease-in-out duration-200 shadow-lg shadow-dark w-full rounded-md object-cover h-80 border-8 border-white"
-                            src={image.src}
-                            alt={image.alt}
-                            onClick={() => handleModalOpen(image)}
-                        />
-                    )
-                })}
-            </div>
+                <h2 className="about--title text-center text-h2 my-8">ABOUT US</h2>
+                <div className="about--container md:grid md:grid-cols-2 p-4">
+                    <img
+                        className="about--img md:h-fit m-auto md:rounded object-cover shadow-lg shadow-dark md:w-4/5"
+                        src="/images/HotelGardenAbout.webp"
+                        alt="Hotel Garden"
+                    />
+                    <motion.div
+                        className="flex flex-col justify-center my-8"
+                        initial={{ opacity: 0, y: -50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1.25 }}
+                        viewport={{
+                            amount: "some",
+                            once: true,
+                        }}
+                    >
+                        <p className="about--p text-2xl">
+                            Hotel Garden is a Sacramento based Indie Rock band. Their musical style
+                            draws inspiration from artists such as Peach Pit, Turnover, and The
+                            Backseat Lovers. With each show, the band strives to connect with
+                            audiences through their music and create a memorable experience.
+                        </p>
+                    </motion.div>
+                </div>
+            </motion.div>
+
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.25 }}
+                viewport={{
+                    amount: "some",
+                    once: true,
+                }}
+            >
+                <h2 className="my-8 text-center text-h2">Gallery</h2>
+                <div
+                    className="gallery-container container grid my-8 mx-auto gap-4 md:grid-cols-3 grid-cols-1"
+                >
+                    {galleryImages.map((image) => {
+                        return (
+                            <motion.div key={image.id}
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 1 }}
+                                viewport={{
+                                    amount: "all",
+                                    once: true,
+                                }}
+                            >
+
+                                <img
+                                    className="hover:scale-105 cursor-pointer transition ease-in-out duration-200 shadow-lg shadow-dark w-full rounded-md object-cover h-80 border-8 border-white"
+                                    src={image.src}
+                                    alt={image.alt}
+                                    onClick={() => handleModalOpen(image)}
+                                />
+                            </motion.div>
+                        )
+                    })}
+                </div>
+            </motion.div>
             <Modal isModalOpen={isModalOpen} image={selectedImage} onModalClose={handleModalClose} />
         </section>
     )

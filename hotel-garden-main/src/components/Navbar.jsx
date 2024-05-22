@@ -48,7 +48,7 @@ const Navbar = () => {
 
     window.addEventListener('scroll', () => {
         const mobileHeader = document.querySelector('.mobile--header')
-        if (window.scrollY > 100) {
+        if (window.scrollY > 200) {
             mobileHeader.classList.add('bg-slate-900')
         } else {
             mobileHeader.classList.remove('bg-slate-900')
