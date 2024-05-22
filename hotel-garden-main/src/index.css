@@ -75,13 +75,13 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
       url("./assets/heroBackground.webp");
     background-size: cover;
-    background-position: left;
+    background-position: right;
     background-repeat: no-repeat;
     background-color: #000;
   }
 
   .mobile--title {
-    font-size: 5.5rem;
+    font-size: 5rem;
   }
   .navbar {
     display: none;
