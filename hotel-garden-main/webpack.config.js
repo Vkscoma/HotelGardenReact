@@ -11,7 +11,7 @@ const __dirname = dirname(__filename); // imports the path module
 export default {
     entry: './src/App.jsx', // the entry point of your app
     output: {
-        filename: 'main.jsx', // the name of the output bundle
+        filename: 'main.js', // the name of the output bundle
         path: path.resolve(__dirname, 'dist'), // where to output the bundle
     },
     module: {
