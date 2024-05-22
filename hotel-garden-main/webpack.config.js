@@ -1,10 +1,15 @@
-import path from 'path'; // imports the path module
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename); // imports the path module
 
 export default {
     entry: './src/App.jsx', // the entry point of your app
     output: {
         filename: 'main.js', // the name of the output bundle
-        path: path.resolve('hotel-garden-main', 'dist'), // where to output the bundle
+        path: path.resolve(__dirname, 'dist'), // where to output the bundle
     },
     module: {
         rules: [
