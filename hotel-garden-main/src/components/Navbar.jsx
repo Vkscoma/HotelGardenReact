@@ -66,7 +66,7 @@ const Navbar = () => {
                     <FaBars />
                 </motion.div>
             </div>
-            <nav id='home' className="navbar navbar-mobile md:mt-4" >
+            <nav className="navbar navbar-mobile md:mt-4" >
                 <div className="fixed top-0 right-0">
                     <motion.div
                         className="absolute top-4 right-3 text-2xl md:hidden"
