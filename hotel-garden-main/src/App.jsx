@@ -1,7 +1,5 @@
 import './index.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import HeroBackground from './assets/HeorBackground.json'
-import Lottie from 'lottie-react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Music from './components/Music'
@@ -17,19 +15,13 @@ function App() {
       <Routes>
         <Route path='/' element={
           <div>
-            <Lottie
-              animationData={HeroBackground}
-              className='background-lottie'
-            />
-            <div className='content'>
-              <Navbar />
-              <Hero />
-              <Music />
-              <Shows />
-              <About />
-              <Contact />
-              <Footer />
-            </div>
+            <Navbar />
+            <Hero />
+            <Music />
+            <Shows />
+            <About />
+            <Contact />
+            <Footer />
           </div>
         } />
         <Route path='/roomservice' element={<Roomservice />} />

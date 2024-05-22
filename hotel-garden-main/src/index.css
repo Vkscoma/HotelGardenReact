@@ -9,11 +9,11 @@
 
 html {
   scroll-behavior: smooth;
+  animation: fadeIn ease 2.25s;
 }
 
 body {
   font-family: "Outfit", sans-serif;
-  animation: fadeIn ease 2.25s;
 }
 
 body,
@@ -25,13 +25,16 @@ html,
   height: 100%;
 }
 
-.background-lottie {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
+body {
   background-color: #000;
+  background-image: url("./images/heroBackground.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1000;
 }
 
 @keyframes fadeIn {
@@ -68,12 +71,13 @@ html,
 }
 
 @media (max-width: 450px) {
-  .background-lottie {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: fixed;
+  body {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+      url("./images/heroBackground.webp");
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-color: #000;
   }
 
   .mobile--title {
