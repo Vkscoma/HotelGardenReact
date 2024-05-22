@@ -56,6 +56,17 @@ html,
   }
 }
 
+.room--service__container {
+  background-image: linear-gradient(
+    to left bottom,
+    #f88180,
+    #ee82b5,
+    #c492e0,
+    #7fa5f4,
+    #12b3eb
+  );
+}
+
 @media (max-width: 450px) {
   .background-lottie {
     top: 0;
