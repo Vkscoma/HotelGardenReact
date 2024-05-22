@@ -1,6 +1,8 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import CopyPlugin from 'copy-webpack-plugin';
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename); // imports the path module
@@ -38,10 +40,39 @@ export default {
                         },
                     },
                 ],
+            },
+            {
+                loader: 'image-webpack-loader',
+                options: {
+                    mozjpeg: {
+                        progressive: true,
+                        quality: 65
+                    },
+                    optipng: {
+                        enabled: false,
+                    },
+                    pngquant: {
+                        quality: [0.65, 0.90],
+                        speed: 4
+                    },
+                    gifsicle: {
+                        interlaced: false,
+                    },
+                    webp: {
+                        quality: 75
+                    },
+                },
             }
         ],
     },
     resolve: {
         extensions: ['.js', '.jsx'], // resolves these extensions
     },
+    plugins: [
+        new CopyPlugin({
+            patterns: [
+                { from: 'public', to: '' },
+            ],
+        }),
+    ],
 };
