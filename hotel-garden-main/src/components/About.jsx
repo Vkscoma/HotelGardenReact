@@ -77,7 +77,7 @@ const About = () => {
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.25 }}
+                transition={{ duration: 0.8 }}
                 viewport={{
                     amount: "500px",
                     once: true,
@@ -94,7 +94,7 @@ const About = () => {
                         className="flex flex-col justify-center my-8"
                         initial={{ opacity: 0, y: -50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1.25 }}
+                        transition={{ duration: 0.8 }}
                         viewport={{
                             amount: "some",
                             once: true,
@@ -113,7 +113,7 @@ const About = () => {
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.25 }}
+                transition={{ duration: 0.8 }}
                 viewport={{
                     amount: "some",
                     once: true,

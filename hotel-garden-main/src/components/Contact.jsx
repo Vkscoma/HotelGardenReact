@@ -9,7 +9,7 @@ const Contact = () => {
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.25 }}
+                transition={{ duration: 0.8 }}
                 viewport={{
                     amount: "some",
                     once: true,
@@ -23,7 +23,7 @@ const Contact = () => {
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.25 }}
+                transition={{ duration: 0.8 }}
                 viewport={{
                     amount: "some",
                     once: true,
