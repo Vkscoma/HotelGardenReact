@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename); // imports the path module
 
 export default {
-    entry: './src/App.jsx', // the entry point of your app
+    entry: './src/main.jsx', // the entry point of your app
     output: {
         filename: 'main.js', // the name of the output bundle
         path: path.resolve(__dirname, 'dist'), // where to output the bundle
