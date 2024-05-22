@@ -27,7 +27,7 @@ html,
 
 body {
   background-color: #000;
-  background-image: url("./images/heroBackground.webp");
+  background-image: url("./assets/heroBackground.webp");
   background-size: cover;
   background-repeat: no-repeat;
   top: 0;
@@ -73,7 +73,7 @@ body {
 @media (max-width: 450px) {
   body {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-      url("./images/heroBackground.webp");
+      url("./assets/heroBackground.webp");
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;

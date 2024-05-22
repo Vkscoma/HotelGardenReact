@@ -23,6 +23,17 @@ export default {
                     'postcss-loader' // processes CSS with PostCSS
                 ], // uses the @svgr/webpack loader
             },
+            {
+                test: /\.(png|jpe?g|gif|webp)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[path][name].[ext]',
+                        },
+                    },
+                ],
+            }
         ],
     },
     resolve: {
