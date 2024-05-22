@@ -6,7 +6,7 @@ const Hero = () => {
     return (
         <div id='home' className='relative w-full h-screen'>
             <div className="relative flex justify-center md:mt-40 my-64">
-                <h1 className="md:text-9xl text-7xl text-white text-center font-bold" style={titleStyle}>HOTEL <br />GARDEN</h1>
+                <h1 className="md:text-9xl mobile--title text-white text-center font-bold" style={titleStyle}>HOTEL <br />GARDEN</h1>
             </div>
         </div>
     )

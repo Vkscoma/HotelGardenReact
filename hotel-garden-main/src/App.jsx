@@ -14,15 +14,17 @@ function App() {
     <>
       <Lottie
         animationData={HeroBackground}
-        className='fixed left-0 right-0 bottom-0 w-full -z-10'
+        className='background-lottie'
       />
-      <Navbar />
-      <Hero />
-      <Music />
-      <Shows />
-      <About />
-      <Contact />
-      <Footer />
+      <div className='content'>
+        <Navbar />
+        <Hero />
+        <Music />
+        <Shows />
+        <About />
+        <Contact />
+        <Footer />
+      </div>
     </>
   )
 }

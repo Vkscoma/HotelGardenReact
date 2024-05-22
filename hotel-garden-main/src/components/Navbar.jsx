@@ -56,7 +56,7 @@ const Navbar = () => {
     })
     return (
         <>
-            <div className='md:hidden mobile--header flex text-center justify-center items-center w-full fixed top-0 py-3 transition-all 250ms ease-in-out z-50'>
+            <div className='md:hidden mobile--header flex text-center justify-center items-center w-full fixed top-0 py-6 transition-all 250ms ease-in-out z-50'>
                 <h1 className="text-xl text-white font-bold text-center md:text-4xl md:hidden">HOTEL GARDEN</h1>
                 <motion.div
                     className="text-2xl absolute right-5 z-20 text-white md:hidden"
