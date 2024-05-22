@@ -56,10 +56,10 @@ const Navbar = () => {
     })
     return (
         <>
-            <div className='md:hidden mobile--header flex text-center justify-center items-center w-full fixed top-0 py-3 transition-all 250ms ease-in-out'>
-                <h1 className="text-xl font-bold text-center md:text-4xl md:hidden">HOTEL GARDEN</h1>
+            <div className='md:hidden mobile--header flex text-center justify-center items-center w-full fixed top-0 py-3 transition-all 250ms ease-in-out z-50'>
+                <h1 className="text-xl text-white font-bold text-center md:text-4xl md:hidden">HOTEL GARDEN</h1>
                 <motion.div
-                    className="text-2xl absolute right-3 z-20 text-slate-600 md:hidden"
+                    className="text-2xl absolute right-3 z-20 text-white md:hidden"
                     whileTap={{ rotate: 180, scale: 0.5 }}
                     onClick={handleNavToggle}
                 >
