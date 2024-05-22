@@ -101,10 +101,10 @@ const About = () => {
                         }}
                     >
                         <p className="about--p text-2xl">
-                            Hotel Garden is a Sacramento based Indie Rock band. Their musical style
+                            Hotel Garden is a Sacramento based Indie Rock band. Our musical style
                             draws inspiration from artists such as Peach Pit, Turnover, and The
-                            Backseat Lovers. With each show, the band strives to connect with
-                            audiences through their music and create a memorable experience.
+                            Backseat Lovers. So if you cuff your jeans and enjoy expensive coffee,
+                            we might just be the band for you!
                         </p>
                     </motion.div>
                 </div>

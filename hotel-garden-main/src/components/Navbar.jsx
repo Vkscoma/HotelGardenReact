@@ -59,7 +59,7 @@ const Navbar = () => {
             <div className='md:hidden mobile--header flex text-center justify-center items-center w-full fixed top-0 py-3 transition-all 250ms ease-in-out z-50'>
                 <h1 className="text-xl text-white font-bold text-center md:text-4xl md:hidden">HOTEL GARDEN</h1>
                 <motion.div
-                    className="text-2xl absolute right-3 z-20 text-white md:hidden"
+                    className="text-2xl absolute right-5 z-20 text-white md:hidden"
                     whileTap={{ rotate: 180, scale: 0.5 }}
                     onClick={handleNavToggle}
                 >
@@ -69,7 +69,7 @@ const Navbar = () => {
             <nav className="navbar navbar-mobile md:mt-4" >
                 <div className="fixed top-0 right-0">
                     <motion.div
-                        className="absolute top-4 right-3 text-2xl md:hidden"
+                        className="absolute top-4 right-5 text-2xl md:hidden"
                         whileTap={{ rotate: 180, scale: 0.5 }}
                         onClick={handleNavToggle}
                     >
@@ -86,9 +86,10 @@ const Navbar = () => {
                 <ul className='social--media--container md:flex md:justify-center md:items-center md:mt-4 md:gap-4 md:text-2xl'>
                     {socialMediaItems.map((item, index) => {
                         return (
-                            <li key={index} href
-                                ={item.link} className="social--media--item text-white hover:text-blue-500 cursor-pointer">
-                                <item.icon />
+                            <li key={index} className="social--media--item text-white hover:text-blue-500 cursor-pointer">
+                                <a href={item.link} target="_blank" rel="noreferrer" aria-label={item.name} >
+                                    <item.icon />
+                                </a>
                             </li>
                         )
                     })}
