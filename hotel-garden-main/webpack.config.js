@@ -4,32 +4,32 @@ import { dirname } from 'path';
 import CopyPlugin from 'copy-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename); // imports the path module
+const __dirname = dirname(__filename);
 
 export default {
-    entry: './src/main.jsx', // the entry point of your app
+    entry: './src/main.jsx',
     output: {
-        filename: 'main.js', // the name of the output bundle
-        path: path.resolve(__dirname, 'dist'), // where to output the bundle
+        filename: 'main.js',
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/', // Ensure the public path is correct
     },
     module: {
         rules: [
             {
-                test: /\.jsx?$/, // matches .js and .jsx files
-                exclude: /node_modules/, // excludes the node_modules directory
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
                 use: {
-                    loader: 'babel-loader', // transpiles your code
+                    loader: 'babel-loader',
                 },
             },
             {
-                test: /\.css$/, // matches .css files
+                test: /\.css$/,
                 use: [
-                    'style-loader', // injects CSS into the DOM
-                    'css-loader', // resolves CSS imports
-                    'postcss-loader' // processes CSS with PostCSS
-                ], // uses the @svgr/webpack loader
+                    'style-loader',
+                    'css-loader',
+                    'postcss-loader'
+                ],
             },
             {
                 test: /\.(png|jpe?g|gif|webp)$/i,
@@ -45,7 +45,7 @@ export default {
         ],
     },
     resolve: {
-        extensions: ['.js', '.jsx'], // resolves these extensions
+        extensions: ['.js', '.jsx'],
     },
     plugins: [
         new CopyPlugin({
@@ -54,7 +54,15 @@ export default {
             ],
         }),
         new HtmlWebpackPlugin({
-            template: './index.html', // path to your index.html file
+            template: './index.html',
         }),
     ],
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'dist'),
+        },
+        compress: true,
+        port: 9000,
+        historyApiFallback: true, // For SPA routing
+    },
 };
