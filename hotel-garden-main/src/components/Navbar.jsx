@@ -49,14 +49,14 @@ const Navbar = () => {
     window.addEventListener('scroll', () => {
         const mobileHeader = document.querySelector('.mobile--header')
         if (window.scrollY > 200) {
-            mobileHeader.classList.add('bg-slate-900')
+            mobileHeader.classList.add('bg-slate-800')
         } else {
-            mobileHeader.classList.remove('bg-slate-900')
+            mobileHeader.classList.remove('bg-slate-800')
         }
     })
     return (
         <>
-            <div className='md:hidden mobile--header flex text-center justify-center items-center w-full fixed top-0 py-6 transition-all 250ms ease-in-out z-50'>
+            <div className='md:hidden mobile--header flex text-center justify-center items-center w-full fixed top-0 py-6 transition-all duration-300 ease-in-out z-50'>
                 <h1 className="text-xl text-white font-bold text-center md:text-4xl md:hidden">HOTEL GARDEN</h1>
                 <motion.div
                     className="text-2xl absolute right-5 z-20 text-white md:hidden"
