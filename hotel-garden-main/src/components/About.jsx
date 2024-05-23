@@ -136,7 +136,7 @@ const About = () => {
                             >
 
                                 <img
-                                    className="hover:scale-105 cursor-pointer transition ease-in-out duration-200 shadow-lg shadow-dark w-full rounded-md object-cover h-80 border-8 border-white"
+                                    className=" hover:shadow-indigo-400 cursor-pointer transition ease-in-out duration-200 shadow-lg shadow-dark w-full rounded-md object-cover h-80 border-8 border-white"
                                     src={image.src}
                                     alt={image.alt}
                                     onClick={() => handleModalOpen(image)}

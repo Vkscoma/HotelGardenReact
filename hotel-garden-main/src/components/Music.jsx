@@ -55,7 +55,7 @@ const Music = () => {
                             return (
                                 <li key={index}>
                                     <a href={item.url} target="_blank" rel="noreferrer" aria-label={item.ariaLabel}>
-                                        <Icon size={50} className="text-white hover:text-blue-400" />
+                                        <Icon size={50} className="text-white hover:text-blue-400 transition-all duration-200 ease-in-out" />
                                     </a>
                                 </li>
                             )

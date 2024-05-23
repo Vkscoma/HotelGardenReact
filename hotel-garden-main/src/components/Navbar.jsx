@@ -77,16 +77,16 @@ const Navbar = () => {
                     </motion.div>
                 </div>
                 <ul className="nav--link--container md:flex md:justify-center md:gap-8 ">
-                    <li className="md:text-xl text-white hover:text-blue-500"><a href="#home" onClick={handleNavToggle}>HOME</a></li>
-                    <li className="md:text-xl text-white hover:text-blue-500"><a href="#music" onClick={handleNavToggle}>MUSIC</a></li>
-                    <li className="md:text-xl text-white hover:text-blue-500"><a href="#shows" onClick={handleNavToggle}>SHOWS</a></li>
-                    <li className="md:text-xl text-white hover:text-blue-500"><a href="#about" onClick={handleNavToggle}>ABOUT</a></li>
-                    <li className="md:text-xl text-white hover:text-blue-500"><a href="#contact" onClick={handleNavToggle}>CONTACT</a></li>
+                    <li className="md:text-xl text-white hover:text-blue-500 transition-all duration-200 ease-in-out"><a href="#home" onClick={handleNavToggle}>HOME</a></li>
+                    <li className="md:text-xl text-white hover:text-blue-500 transition-all duration-200 ease-in-out"><a href="#music" onClick={handleNavToggle}>MUSIC</a></li>
+                    <li className="md:text-xl text-white hover:text-blue-500 transition-all duration-200 ease-in-out"><a href="#shows" onClick={handleNavToggle}>SHOWS</a></li>
+                    <li className="md:text-xl text-white hover:text-blue-500 transition-all duration-200 ease-in-out"><a href="#about" onClick={handleNavToggle}>ABOUT</a></li>
+                    <li className="md:text-xl text-white hover:text-blue-500 transition-all duration-200 ease-in-out"><a href="#contact" onClick={handleNavToggle}>CONTACT</a></li>
                 </ul>
                 <ul className='social--media--container md:flex md:justify-center md:items-center md:mt-4 md:gap-4 md:text-2xl'>
                     {socialMediaItems.map((item, index) => {
                         return (
-                            <li key={index} className="social--media--item text-white hover:text-blue-500 cursor-pointer">
+                            <li key={index} className="social--media--item text-white hover:text-blue-500 transition-all duration-200 ease-in-out cursor-pointer">
                                 <a href={item.link} target="_blank" rel="noreferrer" aria-label={item.name} >
                                     <item.icon />
                                 </a>
