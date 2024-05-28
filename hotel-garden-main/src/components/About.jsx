@@ -7,16 +7,16 @@ const Modal = ({ isModalOpen, image, onModalClose }) => {
         document.body.style.overflow = 'hidden'
         return (
             <motion.div
-                className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90 overflow-hidden z-50"
+                className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90 z-50"
                 onClick={onModalClose}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
             >
                 <motion.div
-                    className="relative max-w-xl md:p-6 p-4 overflow-hidden"
+                    className="relative max-w-xl md:p-6 p-4 "
                     onClick={(e) => e.stopPropagation()}
-                    initial={{ opacity: 0, scale: 0.65 }}
+                    initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8 }}
                 >
