@@ -24,8 +24,10 @@ const Modal = ({ isModalOpen, image, onModalClose }) => {
                 </motion.div>
             </motion.div>
         )
+    } else {
+        document.body.style.overflow = 'auto'
+        return null
     }
-    document.body.style.overflow = 'auto'
 }
 
 const About = () => {
