@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 
 const Modal = ({ isModalOpen, image, onModalClose }) => {
     if (isModalOpen) {
-        document.body.style.overflow = 'hidden'
         return (
             <motion.div
                 className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90 z-50 overflow-hidden"
@@ -25,7 +24,6 @@ const Modal = ({ isModalOpen, image, onModalClose }) => {
             </motion.div>
         )
     }
-    document.body.style.overflow = 'auto'
 }
 
 const About = () => {
@@ -35,10 +33,12 @@ const About = () => {
     const handleModalOpen = (image) => {
         setSelectedImage(image);
         setIsModalOpen(true);
+        document.body.style.overflow = 'hidden';
     }
     const handleModalClose = () => {
         setSelectedImage(null);
         setIsModalOpen(false);
+        document.body.style.overflow = 'auto';
     }
     const galleryImages = [
         {
