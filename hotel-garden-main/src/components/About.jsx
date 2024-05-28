@@ -14,10 +14,10 @@ const Modal = ({ isModalOpen, image, onModalClose }) => {
                 transition={{ duration: 0.8 }}
             >
                 <motion.div
-                    className="relative max-w-xl md:p-6 p-4"
+                    className="relative max-w-xl md:p-6 p-4 overflow-hidden"
                     onClick={(e) => e.stopPropagation()}
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, scale: 0.65 }}
+                    animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8 }}
                 >
                     <img src={image.src} alt={image.alt} className="rounded-md" />
