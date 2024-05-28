@@ -7,7 +7,7 @@ const Modal = ({ isModalOpen, image, onModalClose }) => {
         document.body.style.overflow = 'hidden'
         return (
             <motion.div
-                className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90 z-50"
+                className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90 z-50 overflow-hidden"
                 onClick={onModalClose}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -24,10 +24,8 @@ const Modal = ({ isModalOpen, image, onModalClose }) => {
                 </motion.div>
             </motion.div>
         )
-    } else {
-        document.body.style.overflow = 'auto'
-        return null
     }
+    document.body.style.overflow = 'auto'
 }
 
 const About = () => {
